@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>use strict</title>
+	<link rel="stylesheet" href="style.css"/>
+	
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			
+			//$("p").css("background-color","gray");
+			//$("p").css("font-size","20px");
+
+			var hh = $("h1");
+
+			$("p").css({
+				"background-color": "green",
+				"font-size":"20px"
+			});
+
+
+
+
+		})
+
+		//verifica se o cara escreveu correto no campo indicado
+		function verificarCampo (_campo,_palavra) {
+			if(_campo.value == _palavra)
+			{
+				_campo.className = "disab";
+				_campo.readonly = true;
+				_campo.disabled = true;
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+	
+	<h1>HTML tab basica</h1>
+	<p>Escreva a tag para criar um parágrafo.</p>
+	<p>Escreva a tag para criar um CABECALHO.</p>
+
+		<input type="text" onkeyup="verificarCampo(this,'<p>')">
+
+		<br><br>
+
+		<input type="text" onkeyup="verificarCampo(this,'<br>')">
+		
+		<br><br>
+
+		
+
+</body>
+</html>
